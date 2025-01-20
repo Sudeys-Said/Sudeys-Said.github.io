@@ -15,13 +15,11 @@
     - Pros: simplistic, functional, modular and cost effective
 
 
-### Midterm detailed process
 
-
-
-### Final project detailed process
+### Final project - dual booting ubuntu and windows and setting up an open source obd2 diagnostic on the tv
 Started of setting up and dual booting the computer.
   - issues faced: currupted windows, currupted usbs
-  - solutions: had to get ubuntu on the usb again
+  - solutions: wiped and re-installed ubuntu and windows
+installing obd2 
 
 

@@ -16,37 +16,48 @@
 
 
 
-### Final project - dual booting ubuntu and windows and setting up an open source obd2 diagnostic on the tv
-Started of setting up and dual booting the computer.
-  - issues faced: currupted windows, currupted usbs
-  - solutions: wiped and re-installed ubuntu and windows
-Installing pyobd:
-  - issue: horrible to follow, not properly organized, requires previous knowledge, somethings wouldn't dow
-  - solution: make our own guide
+### Final project - Dual booting ubuntu and windows and setting up an open source obd2 diagnostic on the tv
+- Started of setting up and dual booting the computer.
+  - Issues faced: currupted windows, currupted usbs
+  - Solutions: wiped and re-installed ubuntu and windows
+- installation guide:
+   - Right click windows or search disk management
+   - Right click the partition that has boot in it, and choose shrink volume option
+   - Recomended atleast 15-20 GB, make sure with computer module
+   - If secure-boot is on, turn it off
+     - To check, enter windows+R, type msinfo32 and press enter,
+     - To turn it off, hold shift while restarting, enter troubleshoot -> advanced options -> uefi settings
+      - Click restart to enter bios, go to security and turn off secure boot
+   - Plug in usb and get into bios
+   - Boot the ubuntu
+   - Choose whatever custoimizations you want but mainly choose the download alongside windows option during the download process
+- Installing pyobd:
+  - Issue: horrible to follow, not properly organized, requires previous knowledge, somethings wouldn't dow
+  - Solution: make our own guide
 
  
 ### Pyobd installation guide on ubuntu:
-  Downloading pre-requisites (some of these may require a virtual environemt to download, so go through all of them, and download the ones that don't work in a virtual environment)
+  - Downloading pre-requisites (some of these may require a virtual environemt to download, so go through all of them, and download the ones that don't work in a virtual environment)
     - Python3 and python3-pip
     - libnsl2 and libnel-dev (library that helps with downloading pyobd files)
     - pyserial (for better communication with python)
     - python3-wxgtk4.0
     - build-essential libxml2-dev libxslt1-dev zlib1g-dev
     - Download all the files availabe from pyobd barracuda github
-  Connect to the pyobd directory and start up a virtual environment:
-   To download and run a virtual environment:
+  - Connect to the pyobd directory and start up a virtual environment:
+   - To download and run a virtual environment:
      - sudo apt install python3.12-venv
      - python3 -m venv (username)
      - source (username)/bin/activate (run the virtual environment
-   To connect to directory write : 
+   - To connect to directory write : 
     - cd ..
     - cd pyobd  
-  give the account access to usb ports:
-  - sudo usermod -a -G dialout $USER
-  - sudo usermod -a -G tty $USER
-    (restart or log out after entering code above)
+   - give the account access to usb ports:
+    - sudo usermod -a -G dialout $USER
+    - sudo usermod -a -G tty $USER
+   - (restart or log out after entering code above)
     - to test if the code worked: ls /dev/ttyUSB (to see if you can get access to the ports)
-  Download requirements: 
+ -  Download requirements: 
   - sudo apt-get install dpkg-dev build-essential libjpeg-dev libtiff-dev libsdl1.2-dev libgstreamer-plugins-base1.0-0 libnotify-dev libglut-dev libglut3.12 libsm-dev libgtk-3-dev libwebkit2gtk-4.1-dev libxtst-dev gettext python3-dev python3-pip
   - pip3 install --upgrade pyinstaller
   - sudo apt install libglib2.0-dev libsmbclient-dev libcups2-dev libgirepository1.0-dev libcurl4-openssl-dev libssl-dev libsystemd-dev librsync-dev
@@ -57,10 +68,10 @@ Installing pyobd:
   - python3 -m pip install numpy==1.23.3
   - pip install -U numpy
   - sudo apt install python3-pandas python3-spicy
-Write this code and then restart/log out (i recomend a restart):
+- Write this code and then restart/log out (i recomend a restart):
   - sudo usermod -a -G dialout $USER
   - sudo usermod -a -G tty $USER
-After restarting, enter:
+- After restarting, enter:
   - cd pyobd
   - python3 pyobd.py
 

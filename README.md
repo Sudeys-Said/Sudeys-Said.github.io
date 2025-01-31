@@ -1,11 +1,11 @@
 # About me
 ### Who am I
-Sudeys Said
-2008
-I am an aspiring future Civil Engineer!
-I have worked with Html&Css and Java main
-Beginner in both and hope to become well versed in both if possible
-I like to play Football, volleyball and any sport really
+- Sudeys Said
+- 2008
+- I am an aspiring future Civil Engineer!
+- I have worked with Html&Css and Java main
+- Beginner in both and hope to become well versed in both if possible
+- I like to play Football, volleyball and any sport really
 
 
 # Portfolio
